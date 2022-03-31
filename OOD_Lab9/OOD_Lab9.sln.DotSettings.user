@@ -3,5 +3,6 @@
   &lt;TestAncestor&gt;&#xD;
     &lt;TestId&gt;MSTest::0C75285C-7381-4FAC-A423-204A25840B90::.NETFramework,Version=v4.7.2::BankAccountTestProject.UnitTest1.Test_Withdraw_Sufficient_Funds_With_Overdraft&lt;/TestId&gt;&#xD;
     &lt;TestId&gt;MSTest::0C75285C-7381-4FAC-A423-204A25840B90::.NETFramework,Version=v4.7.2::BankAccountTestProject.UnitTest1.Test_Withdraw_InSufficient_Funds_With_Overdraft&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;MSTest::0C75285C-7381-4FAC-A423-204A25840B90::.NETFramework,Version=v4.7.2::BankAccountTestProject.UnitTest1.Test_Withdraw_Insufficient_Funds&lt;/TestId&gt;&#xD;
   &lt;/TestAncestor&gt;&#xD;
 &lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>
