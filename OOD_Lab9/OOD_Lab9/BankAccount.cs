@@ -9,7 +9,7 @@ namespace OOD_Lab9
     public class BankAccount
     {
         public decimal Balance { get; set; }
-
+        public decimal OverdraftLimit { get; set; }
 
         /// <summary>
         /// Deposits a given amount into the account balance.
@@ -26,7 +26,13 @@ namespace OOD_Lab9
         /// <param name="amount"></param>
         public void WithdrawAmount(decimal amount)
         {
-            Balance -= amount;
+            decimal availableFunds = Balance + OverdraftLimit;
+
+            //Check there are sufficient funds
+            if (amount <= availableFunds)
+            {
+                Balance -= amount;
+            }
         }
 
 

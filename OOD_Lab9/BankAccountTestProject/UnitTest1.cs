@@ -40,7 +40,7 @@ namespace BankAccountTestProject
             decimal expectedBalance = 200m;
 
             //Act
-            b1.DepositAmount(200m);
+            b1.DepositAmount(100m);
             b1.DepositAmount(60m);
             b1.DepositAmount(40m);
 
@@ -80,6 +80,47 @@ namespace BankAccountTestProject
             //Act
             b1.WithdrawAmount(100m);
 
+            //Assert
+            Assert.AreEqual(expectedBalance, b1.Balance);
+        }
+
+
+        /// <summary>
+        /// Tests the BankAccount withdrawal method when account
+        /// has insufficient funds for withdrawal amount. 
+        /// </summary>
+        [TestMethod]
+        public void Test_Withdraw_Insufficient_Funds()
+        {
+            //Arrange
+            BankAccount b1 = new BankAccount();
+            b1.DepositAmount(100m);
+            decimal expectedBalance = 100m;
+
+            //Act
+            b1.WithdrawAmount(200m);
+
+            //Assert
+            //Assert
+            Assert.AreEqual(expectedBalance, b1.Balance);
+        }
+
+        /// <summary>
+        /// Tests the BankAccount withdrawal method when account
+        /// has insufficient funds for withdrawal amount. 
+        /// </summary>
+        [TestMethod]
+        public void Test_Withdraw_Sufficient_Funds_With_Overdraft()
+        {
+            //Arrange
+            BankAccount b1 = new BankAccount();
+            b1.OverdraftLimit = 200m;
+            decimal expectedBalance = -100m;
+
+            //Act
+            b1.WithdrawAmount(100m);
+
+            //Assert
             //Assert
             Assert.AreEqual(expectedBalance, b1.Balance);
         }
