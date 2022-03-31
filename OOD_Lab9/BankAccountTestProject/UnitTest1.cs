@@ -101,13 +101,12 @@ namespace BankAccountTestProject
             b1.WithdrawAmount(200m);
 
             //Assert
-            //Assert
             Assert.AreEqual(expectedBalance, b1.Balance);
         }
 
         /// <summary>
         /// Tests the BankAccount withdrawal method when account
-        /// has insufficient funds for withdrawal amount. 
+        /// has sufficient funds plus overdraft amount for withdrawal amount. 
         /// </summary>
         [TestMethod]
         public void Test_Withdraw_Sufficient_Funds_With_Overdraft()
@@ -121,6 +120,24 @@ namespace BankAccountTestProject
             b1.WithdrawAmount(100m);
 
             //Assert
+            Assert.AreEqual(expectedBalance, b1.Balance);
+        }
+
+        /// <summary>
+        /// Tests the BankAccount withdrawal method when account
+        /// has insufficient funds plus overdraft for withdrawal amount. 
+        /// </summary>
+        [TestMethod]
+        public void Test_Withdraw_InSufficient_Funds_With_Overdraft()
+        {
+            //Arrange
+            BankAccount b1 = new BankAccount();
+            b1.OverdraftLimit = 200m;
+            decimal expectedBalance = 0m;
+
+            //Act
+            b1.WithdrawAmount(300m);
+
             //Assert
             Assert.AreEqual(expectedBalance, b1.Balance);
         }

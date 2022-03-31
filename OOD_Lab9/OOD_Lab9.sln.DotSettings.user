@@ -2,5 +2,6 @@
 	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=0da60f64_002Db25f_002D4ea8_002D91b3_002Daf13cf6f5de4/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="Test_Withdraw_Sufficient_Funds_With_Overdraft" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
   &lt;TestAncestor&gt;&#xD;
     &lt;TestId&gt;MSTest::0C75285C-7381-4FAC-A423-204A25840B90::.NETFramework,Version=v4.7.2::BankAccountTestProject.UnitTest1.Test_Withdraw_Sufficient_Funds_With_Overdraft&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;MSTest::0C75285C-7381-4FAC-A423-204A25840B90::.NETFramework,Version=v4.7.2::BankAccountTestProject.UnitTest1.Test_Withdraw_InSufficient_Funds_With_Overdraft&lt;/TestId&gt;&#xD;
   &lt;/TestAncestor&gt;&#xD;
 &lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>
